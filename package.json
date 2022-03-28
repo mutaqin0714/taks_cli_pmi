@@ -1,0 +1,28 @@
+{
+  "name": "task-cli",
+  "version": "1.0.0",
+  "description": "Task CLI",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "mutaqin.02"
+  },
+  "author": "mutaqin",
+  "license": "ISC",
+  "dependencies": {
+    "@caporal/core": "^2.0.2",
+    "axios": "^0.26.1",
+    "capture-electron": "^4.0.2",
+    "cheerio": "^1.0.0-rc.10",
+    "externalip": "^1.0.2",
+    "ip": "^1.1.5",
+    "public-ip": "^5.0.0",
+    "url-to-screenshot": "^3.0.0",
+    "vorpal": "^1.12.0",
+    "xlsx": "^0.18.5",
+    "yargs": "^17.4.0"
+  }
+}
