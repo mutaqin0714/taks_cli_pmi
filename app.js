@@ -146,7 +146,7 @@ yargs(hideBin(process.argv))
         
         // load(result.data)
         const text = $('.col-bs10-7')
-    
+        
         text.each(function(i, el) {
             //const hasil = $(this).text()
             if (i == 1) {
@@ -197,16 +197,22 @@ yargs(hideBin(process.argv))
     ;(async () => {
         const result = await axios.get('https://www.cgv.id/en/loader/home_movie_list')
 
-        //console.log(result.data)
-
         const now_playing = result.data['now_playing']
-        console.log(now_playing)
+        
         const $ = cherio.load(now_playing)
-        console.log($)
-        const tagA = $(this).find('a')
-
+        
+        const tagA = $('li')
+        
+        const baseURL = 'https://www.cgv.id'
         tagA.each(function(i, el) {
-            console.log($(this).html())
+            const attrb = $(this).find('a').attr()
+            const urls = baseURL+attrb['href']
+            console.log("URL : "+urls)
+            const resultMovies = axios.get(urls)
+            console.log(resultMovies)
+            // const $Movies = cherio.load(resultMovies.data)
+            // const tagTitle = $('.movie-info-title')
+            // console.log("tagTitle : "+tagTitle)
         })
 
     })()
